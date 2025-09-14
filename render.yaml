@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: trading-signals-app
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: WHATSAPP_NUMBER
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: TWILIO_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
